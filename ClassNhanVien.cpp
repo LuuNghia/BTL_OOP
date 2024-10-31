@@ -315,6 +315,7 @@ void NhanVien::xuatNV(){
 //Nhap danh sach nhan vien
 void NhanVien:: nhapDanhSachNV(NhanVien ds[],int n){
 	for(int i=0;i<n;i++){
+		cout<<"============================================"<<endl;
 		cout<<"Nhap nhan vien thu "<<i+1<<":"<<endl;
 		ds[i].nhapNV();
 	}
@@ -333,6 +334,7 @@ void NhanVien::xuatDanhSachNV( NhanVien ds[],int n){
 //sap xep tang dan theo ID
 void NhanVien::sapXepTheoID(NhanVien ds[], int n){
 	cout<<"Danh sach nhan vien sau khi sap xep theo ID:"<<endl;
+	cout<<"============================================"<<endl;
 	int pos;
 	NhanVien x;
 	for(int i=1; i<n; i++){
@@ -347,6 +349,7 @@ void NhanVien::sapXepTheoID(NhanVien ds[], int n){
 //sap xep theo ho ten
 void NhanVien::sapXepTheoHoTen(NhanVien ds[], int n){
     cout<<"Danh sach nhan vien sau khi sap xep theo ho ten:"<<endl;
+    cout<<"============================================"<<endl;
     for(int i = 0; i < n - 1; i++){
         for (int j = i + 1; j < n; j++){
             if (ds[i].hoTen > ds[j].hoTen){
@@ -461,6 +464,7 @@ int main(){
     cout<<"8.Tim kiem nhan vien co luong cao nhat!"<<endl;
     cout<<"9.Tim kiem nhan vien theo so CCCD!"<<endl;
     cout<<"0.Thoat!"<<endl;
+    cout<<"============================================"<<endl;
     cout<<"Xin moi nhap lua chon cua ban: ";
     cin>>choice;
     switch (choice){
@@ -507,6 +511,7 @@ int main(){
 				    string ID;
 					cin.ignore();
 					getline(cin,ID);
+					cout<<"============================================"<<endl;
 				    NV.timKiemTheoID(ds,n,ID);
                 }else{
                     cout<<"Ban chua nhap danh sach nhan vien!"<<endl;
@@ -518,6 +523,7 @@ int main(){
 				    string ten;
 				    cin.ignore();
 				    getline(cin, ten);
+				    cout<<"============================================"<<endl;
 				    NV.timKiemTheoHoTen(ds,n,ten);
                 } else {
                     cout<<"Ban chua nhap danh sach nhan vien!"<<endl;
@@ -536,6 +542,7 @@ int main(){
 				    string x;
 					cin.ignore();
 					getline(cin,x);
+					cout<<"============================================"<<endl;
 				    NV.timKiemTheoCCCD(ds,n,x);
                 }else{
                     cout<<"Ban chua nhap danh sach nhan vien!"<<endl;
